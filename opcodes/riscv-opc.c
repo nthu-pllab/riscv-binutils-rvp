@@ -1563,6 +1563,19 @@ const struct riscv_opcode riscv_opcodes[] =
 {"vfdot.vv",   0, {"V", 0},  "Vd,Vt,VsVm", MATCH_VFDOTVV, MASK_VFDOTVV, match_opcode, 0},
 /* END RVV */
 
+/* RVP */
+{"kadd32",  0, {"I", 0}, "d,s,t", MATCH_KADD32, MASK_KADD32, match_opcode, 0},
+
+/* 8-bit Multiply with 32-bit Add Instructions */
+{"smaqa",     0, {"I", 0}, "d,s,t", MATCH_SMAQA, MASK_SMAQA, match_opcode, 0},
+{"smaqa.su",  0, {"I", 0}, "d,s,t", MATCH_SMAQA_SU, MASK_SMAQA_SU, match_opcode, 0},
+
+{"pkbb32",  0, {"I", 0}, "d,s,t", MATCH_PKBB32, MASK_PKBB32, match_opcode, 0},
+{"pkbt32",  0, {"I", 0}, "d,s,t", MATCH_PKBT32, MASK_PKBT32, match_opcode, 0},
+{"pktb32",  0, {"I", 0}, "d,s,t", MATCH_PKTB32, MASK_PKTB32, match_opcode, 0},
+
+/* END RVP */
+
 /* Terminate the list.  */
 {0, 0, {0}, 0, 0, 0, 0, 0}
 };
